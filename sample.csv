@@ -1,0 +1,4 @@
+name,width,height,fps,frames
+Hero_16x9,1920,1080,25,250
+Story_9x16,1080,1920,30,300
+"Launch, EN",1080,1080,23.976,240

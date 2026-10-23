@@ -1,0 +1,27 @@
+SOLA SpecBatch Free v0.1 — CSV specifications to blank After Effects compositions
+
+WHAT IT DOES
+Creates new, empty compositions from name,width,height,fps,frames CSV rows. This is a setup utility, not an animation template. No media replacement, existing-comp resizing, rendering or layer automation.
+
+REQUIREMENTS / VERIFIED ENVIRONMENT
+Adobe After Effects 2026 on macOS was tested. After Effects itself is required and is not included. Other AE versions and Windows are untested. Keep both SpecBatch.jsx and SpecBatchCore.js together in the same folder. No installation, network connection, account, external packages or script network/file-writing permission is required by this code.
+
+START
+1. Save your current AE project and start a separate test project first.
+2. File > Scripts > Run Script File: select SpecBatch.jsx. Do not choose Install Script.
+3. Paste CSV or choose Load CSV. The first row must be exactly: name,width,height,fps,frames
+4. Choose Validate & preview. Review sizes, frame rates and durations.
+5. Choose Create checked batch and confirm. A new SpecBatch folder is created. Existing compositions are not edited.
+6. To undo a whole batch, close the script palette, focus AE's main Project panel, then Edit > Undo (Cmd+Z on the tested Mac). Repeat once per created batch. An active text field/palette may show a different Undo context.
+
+SAMPLE
+See sample.csv. Names with commas must be quoted. Japanese names were tested. Pixel aspect ratio is fixed at1. Width/height are integers4-30000; fps1-99; positive integer frames; duration must fit AE limits; up to200rows and1MB CSV are code limits, not a claim that every boundary/version was natively tested. Existing comp names and duplicate names are rejected.
+
+NATIVE QA PERFORMED
+Five created specs across two batches:1920x1080/25fps/250frames;1080x1920/30fps/300frames;1080x1080/23.976fps/240frames;3840x2160/59.94fps/600frames;1080x1080/24fps/1frame. AE returns small floating-point fps differences. Duplicate-name rejection, width0/fps100 rejection and two sequential batch Undo operations were also checked. Imported-file workflow,200row batches, failure rollback, other AE releases and Windows remain unverified.
+
+COST / SUPPORT
+Free utility. No results or time savings are guaranteed. Review the actual settings before using an output in paid work. No bundled artwork, fonts, stock images, render presets or paid Chrome Orbit motion files. Those are separate products. Feedback:sola@moshpit.jp. Maintenance/support availability is not guaranteed.
+
+PRIVACY
+CSV is read locally by AE. Original code has no network calls, telemetry or uploads.
