@@ -6,6 +6,10 @@ For motion designers setting up a delivery list with different sizes, frame rate
 
 ![Actual After Effects output](native-output.jpg)
 
+## Try the browser checker
+
+[Check a CSV before opening After Effects](https://sola-chrome-orbit.kaoru-coccyx.chatgpt.site/after-effects-csv-compositions/). It uses this utility’s validation core, runs locally in your browser, and offers the same free v0.1 ZIP without an account. It checks your list only; it cannot see composition names already in an AE project. The browser does not create or render AE compositions.
+
 ## Download and run
 
 1. Download the [v0.1 package](https://github.com/kaorukaore-x/specbatch-after-effects/releases/latest), or choose **Code → Download ZIP**.
