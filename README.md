@@ -37,7 +37,7 @@ Story_9x16,1080,1920,30,300
 ```
 
 
-A new folder holds the new comps. Existing items are not edited. To undo, close the palette, focus the main Project panel and use **Edit → Undo** once per batch.
+A new folder holds the new comps. Existing items are not edited. To undo, focus the main Project panel (use **Window → Project** if the floating palette has focus), then choose **Edit → Undo: SOLA SpecBatch** once per batch.
 
 
 ## Tested and untested
@@ -46,7 +46,7 @@ A new folder holds the new comps. Existing items are not edited. To undo, close 
 Tested in **After Effects 2026 on macOS**: five specs across two batches, including 3840×2160 at59.94fps, Japanese names, quoted commas and a one-frame comp. Actual comp settings were read back. Duplicate names and invalid width/fps were rejected; two batches were undone.
 
 
-A separate 25 October 2026 test loaded `sample.csv` through the native macOS file picker and created three comps: 1920×1080 / 25 fps / 250 frames, 1080×1920 / 30 fps / 300 frames, and 1080×1080 / 23.976 fps / 240 frames. Actual settings were read back. Closing the palette and restoring that later test project through the automation interface remain unverified; the earlier two-batch Undo check does not establish cleanup of this later test. Always use a separate test project first.
+A separate 25 October 2026 test loaded `sample.csv` through the native macOS file picker and created three comps: 1920×1080 / 25 fps / 250 frames, 1080×1920 / 30 fps / 300 frames, and 1080×1080 / 23.976 fps / 240 frames. Actual settings were read back. That test batch was subsequently undone using **Window → Project**, then **Edit → Undo: SOLA SpecBatch** in the main application. The test folder disappeared and the Project panel was empty again. The floating palette did not need to be closed. Always use a separate test project first.
 
 Windows, other AE versions, 200-row batches, and failure rollback are **unverified**. Limits in the code are not a claim that every boundary was tested. See [START_HERE.txt](START_HERE.txt).
 
